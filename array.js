@@ -164,3 +164,26 @@ console.log(array21);
   { type: 'Saab', year: 2001 }
 ]
 */
+
+//////////////////////////////////////////////////////////////////
+
+const array22 = [2, 5, 1, 10, 3];
+const array23 = array22.map(function(element) {
+  return element * 2;
+});
+console.log(array23); // [ 4, 10, 2, 20, 6 ]
+
+const array24 = array22.filter(function(element) {
+  return element > 4;
+});
+console.log(array24); // [ 5, 10 ]
+
+const array25 = array22.reduce(function(sum, element) {
+  return sum + element;
+});
+console.log(array25); // 21
+
+const array26 = array22.reduce(function(sum, element) {
+  return sum + element;
+}, 100);
+console.log(array26); // 121

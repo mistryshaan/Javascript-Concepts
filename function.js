@@ -22,3 +22,11 @@ function test2() {
   console.log(z);
 }
 test2(); // Test string
+
+//////////////////////////////////////////////////////////////////
+
+function testContext() {
+  console.log(this);
+}
+
+testContext(); // <ref *1> Object [global]

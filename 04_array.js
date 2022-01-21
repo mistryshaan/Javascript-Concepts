@@ -99,7 +99,7 @@ console.log(array15.concat(array16)); // [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h
 
 const array17 = ["a", "b", "c", "d"];
 array17.splice(1, 0, "z");
-console.log(array17); // [ 'a', 's', 'b', 'c', 'd' ]
+console.log(array17); // [ 'a', 'z', 'b', 'c', 'd' ]
 
 //////////////////////////////////////////////////////////////////
 

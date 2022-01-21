@@ -1,4 +1,5 @@
 x = 7;
+console.log(x); // 7
 var x;
 console.log(x); // 7
 

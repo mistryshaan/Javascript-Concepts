@@ -1,32 +1,37 @@
-// const person = {
-//   firstName: "Shaan",
-//   lastName: "Mistry",
-//   age: 21,
-//   location: "Ahmedabad",
-//   fullDetails: function() {
-//     return `${this.firstName} ${this.lastName} is ${this.age} years old & lives in ${this.location}`;
-//   }
-// }
+const person = {
+  firstName: "Shaan",
+  lastName: "Mistry",
+  age: 21,
+  location: "Ahmedabad",
+  fullDetails: function() {
+    return `${this.firstName} ${this.lastName} is ${this.age} years old & lives in ${this.location}`;
+  }
+}
 
-// console.log(person);
-// /* Output:
-// {
-//   firstName: 'Shaan',  
-//   lastName: 'Mistry',  
-//   age: 21,
-//   location: 'Ahmedabad'
-// }
-// */
+console.log(person);
+/* Output:
+{
+  firstName: 'Shaan',  
+  lastName: 'Mistry',  
+  age: 21,
+  location: 'Ahmedabad'
+}
+*/
 
-// console.log(person.firstName); // Shaan
+console.log(person.firstName); // Shaan
 
-// console.log(person["firstName"]); // Shaan
+console.log(person["firstName"]); // Shaan
 
-// console.log(person.fullDetails()); // Shaan Mistry is 21 years old & lives in Ahmedabad
+console.log(person.fullDetails()); // Shaan Mistry is 21 years old & lives in Ahmedabad
 
-// console.log(Object.values(person)); // [ 'Shaan', 'Mistry', 21, 'Ahmedabad', [Function: fullDetails] ]
+console.log(Object.values(person)); // [ 'Shaan', 'Mistry', 21, 'Ahmedabad', [Function: fullDetails] ]
 
-// console.log(JSON.stringify(person)); // {"firstName":"Shaan","lastName":"Mistry","age":21,"location":"Ahmedabad"}
+console.log(JSON.stringify(person)); // {"firstName":"Shaan","lastName":"Mistry","age":21,"location":"Ahmedabad"}
+
+const clonePerson = {...person};
+console.log(clonePerson);
+clonePerson.country = "India";
+console.log(clonePerson);
 
 //////////////////////////////////////////////////////////////////
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .image {
+      height: 100vh;
+      background-image: url("1.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 1s ease-in-out;
+    }
+
+    .controls {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .controls button {
+      font-size: 20px;
+      outline: none;
+      border-radius: 5px;
+      padding: 8px 6px;
+      cursor: pointer;
+      margin: 0 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="image"></div>
+  <div class="controls">
+    <button onclick="previousImage()">&larr;</button>
+    <button onclick="nextImages()">&rarr;</button>
+  </div>
+
+  <script>
+    const imagesArray = ["1", "2", "3", "4", "5", "6", "7"];
+    let counter = 0;
+
+    function previousImage() {
+      if(counter === 0) {
+        counter = imagesArray.length - 1;
+        document.getElementsByClassName("image")[0].style.backgroundImage = `url("${imagesArray[counter]}.jpg")`;
+      } else {
+        counter--;
+        document.getElementsByClassName("image")[0].style.backgroundImage = `url("${imagesArray[counter]}.jpg")`;
+      }
+    }
+
+    function nextImages() {
+      if(counter === imagesArray.length - 1) {
+        counter = 0;
+        document.getElementsByClassName("image")[0].style.backgroundImage = `url("${imagesArray[counter]}.jpg")`;
+      } else {
+        counter++;
+        document.getElementsByClassName("image")[0].style.backgroundImage = `url("${imagesArray[counter]}.jpg")`;
+      }
+    }
+  </script>
+</body>
+</html>

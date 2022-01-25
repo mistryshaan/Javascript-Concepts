@@ -15,7 +15,7 @@
     async function getFile() {
       let promise = new Promise(resolve => {
         let request = new XMLHttpRequest();
-        request.open("GET", "test.html");
+        request.open("GET", "dom.html");
         request.onload = () => {
           if(request.status === 200) {
             resolve(request.response);

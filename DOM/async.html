@@ -7,7 +7,7 @@
   <title>Async</title>
 </head>
 <body>
-  <button onclick="getFile()">Get File</button>
+  <button id="getFileButton">Get File</button>
 
   <div id="response"></div>
 
@@ -26,7 +26,10 @@
         request.send();
       });
       document.getElementById("response").innerHTML = await promise;
+      // document.write(await promise);
     }
+
+    document.getElementById("getFileButton").addEventListener("click", getFile);
   </script>
 </body>
 </html>
